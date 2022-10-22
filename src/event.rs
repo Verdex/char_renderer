@@ -1,5 +1,6 @@
 use graphics_binding::sdl::event::*;
 use graphics_binding::sdl::window::*;
+use graphics_binding::sdl::keyboard::*;
 
 #[derive(Debug)]
 pub struct Timestamp(pub u32);
@@ -25,6 +26,8 @@ pub enum Window {
     IccProfChanged(Timestamp),
     DisplayChanged(Timestamp),
 }
+
+#[derive(Debug)]
 
 #[derive(Debug)]
 pub enum Event {
