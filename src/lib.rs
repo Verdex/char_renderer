@@ -28,6 +28,9 @@ pub fn run( /*event_processor : fn(Event, &mut T)*/ ) {
                 let e = event.assume_init();
                 println!("event type = {}", e.event_type);
                 match e.event_type {
+                    SDL_WINDOWEVENT => {
+
+                    },
                     SDL_QUIT => break,
                     _ => { },
                 }

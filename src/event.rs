@@ -27,7 +27,7 @@ pub enum Window {
     DisplayChanged(Timestamp),
 }
 
-#[derive(Debug)]
+//#[derive(Debug)]
 
 #[derive(Debug)]
 pub enum Event {
