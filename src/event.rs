@@ -6,6 +6,12 @@ use graphics_binding::sdl::keyboard::*;
 pub struct Timestamp(pub u32);
 
 #[derive(Debug)]
+pub enum State {
+    Released,
+    Pressed,
+}
+
+#[derive(Debug)]
 pub enum Window {
     Shown(Timestamp),
     Hidden(Timestamp),
@@ -27,7 +33,103 @@ pub enum Window {
     DisplayChanged(Timestamp),
 }
 
-//#[derive(Debug)]
+#[derive(Debug)]
+pub enum KeyMod {
+
+}
+
+#[derive(Debug)]
+pub enum ScanCode {
+
+}
+
+#[derive(Debug)]
+pub struct Key {
+    A,
+    B,
+    C,
+    D,
+    E,
+    F,
+    G,
+    H,
+    I,
+    J,
+    K,
+    L,
+    M,
+    N,
+    O,
+    P,
+    Q,
+    R,
+    S,
+    T,
+    U,
+    V,
+    W,
+    X,
+    Y,
+    Z,
+    N0,
+    N1,
+    N2,
+    N3,
+    N4,
+    N5,
+    N6,
+    N7,
+    N8,
+    N9,
+    Return,
+    Escape,
+    Backspace,
+    Tab,
+    Space,
+    Minus,
+    Equals,
+    LBracket,
+    RBracket,
+    Backslash,
+    Semicolon,
+    Apostrophe,
+    Grave,
+    Comma,
+    Period,
+    Slash,
+    CapsLock,
+    F1,
+    F2,
+    F3,
+    F4,
+    F5,
+    F6,
+    F7,
+    F8,
+    F9,
+    F10,
+    F11,
+    F12,
+    PrintScreen,
+    Pause,
+    Insert,
+    Home,
+    PageUp,
+    Delete,
+    End,
+    PageDown,
+    Right,
+    Left,
+    Down,
+    Up
+}
+
+#[derive(Debug)]
+pub struct KeyboardDown {
+    pub state : State,
+    pub repeat : u8,
+    pub key : Key 
+}
 
 #[derive(Debug)]
 pub enum Event {
